@@ -1,0 +1,12 @@
+スレッドタイトル:<%= @bulletin_board.title %><br>
+<%= link_to("コメントを投稿する" ,new_bulletin_board_bulletin_board_comment_url(bulletin_board_id: @bulletin_board.id)) %><br>
+
+<% @bulletin_board_comments.each do |bulletin_board_comment| %>
+  名前: <%= bulletin_board_comment.user.name %> 投稿日: <%= bulletin_board_comment.created_at.strftime("%Y/%m/%d %H:%M:%S") %>
+  <% if bulletin_board_comment.user_id == @user.id %>
+    <%= link_to("編集", edit_bulletin_board_bulletin_board_comment_url(id: bulletin_board_comment.id, bulletin_board_id: @bulletin_board.id)) %> <%= link_to("削除", bulletin_board_bulletin_board_comment_url(id: bulletin_board_comment.id, bulletin_board_id: @bulletin_board.id), method: :delete, data: {confirm: '本当に削除しますか?'}) %>
+  <% end %>
+  <br>
+  コメント: <%= bulletin_board_comment.comment %><br><br>
+<% end %>
+<%= link_to("スレッド一覧に戻る", bulletin_boards_url) %>
