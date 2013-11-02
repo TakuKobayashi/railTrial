@@ -23,6 +23,24 @@ end
 gem 'jquery-rails'
 gem 'annotate'
 
+group :test do
+  gem 'spork'
+  gem 'guard-spork'
+end
+
+group :development, :test do
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+end
+
+gem 'kaminari'
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'activerecord-import'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

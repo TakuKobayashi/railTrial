@@ -9,4 +9,5 @@
   <br>
   コメント: <%= bulletin_board_comment.comment %><br><br>
 <% end %>
+<%= paginate @bulletin_board_comments %><br>
 <%= link_to("スレッド一覧に戻る", bulletin_boards_url) %>

@@ -3,7 +3,7 @@ class BulletinBoardsController < BaseController
   before_filter :find_bulletin_board, only: [:edit, :update, :destroy]
 
   def index
-    @bulletin_boards = BulletinBoard.includes([:user, :bulletin_board_comments]).all
+    @bulletin_boards = BulletinBoard.includes([:user, :bulletin_board_comments]).page(params[:page]).per(50)
   end
   
   def new

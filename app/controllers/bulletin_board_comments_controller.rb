@@ -3,7 +3,7 @@ class BulletinBoardCommentsController < BaseController
   before_filter :find_bulletin_board_comment, only: [:edit, :update, :destroy]
 
   def index
-    @bulletin_board_comments = @bulletin_board.bulletin_board_comments.includes(:user).order("id DESC")
+    @bulletin_board_comments = @bulletin_board.bulletin_board_comments.includes(:user).order("id DESC").page(params[:page]).per(50)
   end
   
   def new
