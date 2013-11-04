@@ -38,7 +38,6 @@ group :development, :test do
 end
 
 gem 'kaminari'
-gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'activerecord-import'
 
 # To use ActiveModel has_secure_password
