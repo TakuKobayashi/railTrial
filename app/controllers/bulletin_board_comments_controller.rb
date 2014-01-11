@@ -7,11 +7,11 @@ class BulletinBoardCommentsController < BaseController
   end
   
   def new
-    @bulletin_board_comment = BulletinBoardComment.new
+    @bulletin_board_comment = @bulletin_board.bulletin_board_comments.new
   end
 
   def create
-    BulletinBoardComment.create(params[:bulletin_board_comment])
+    @bulletin_board.bulletin_board_comments.create(params[:bulletin_board_comment])
     redirect_to bulletin_board_bulletin_board_comments_url(bulletin_board_id: @bulletin_board.id)
   end
 
