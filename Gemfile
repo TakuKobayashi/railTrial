@@ -42,6 +42,9 @@ gem 'activerecord-import'
 gem 'therubyracer'
 gem 'execjs'
 
+#push notification on android
+gem 'gcm'
+
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.1.2'
 
