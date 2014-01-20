@@ -58,5 +58,10 @@ Taptappun::Application.routes.draw do
   resources :bulletin_boards do
     resources :bulletin_board_comments
   end
+
+  resource :gcm , controller: :gcm do
+    post :regist
+  end
+
   root to: "top#index"
 end

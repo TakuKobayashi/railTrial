@@ -6,8 +6,12 @@
 #  user_id     :integer          not null
 #  title       :text
 #  description :text
-#  created_at  :datetime         not null
-#  updated_at  :datetime         not null
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+# Indexes
+#
+#  index_bulletin_boards_on_user_id  (user_id)
 #
 
 class BulletinBoard < ActiveRecord::Base
