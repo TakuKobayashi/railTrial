@@ -16,4 +16,22 @@
 /tmp
 
 /.settings/
-/Gemfile.lock
+
+/coverage
+*.DS_Store
+/db/schema.rb
+/coverage/
+.rvmrc
+
+.ruby-gemset
+.ruby-version
+.redcar/
+Thumbs.db
+*~
+.project
+.rvmrc
+.rbenv-version
+vendor/bundle/
+.bundle/config
+/public/system/
+/public/assets/
