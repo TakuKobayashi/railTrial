@@ -1,7 +1,3 @@
 module Constants
-  module Platform
-    IOS = 1
-    ANDROID = 2
-  end
-  API_KEY = "AIzaSyBj5Hxml1dlR6O6XkPuYE0VaGPvDNWAP4A"
+  API_KEY = "AIzaSyA57ZZttUcZeVr5VhNJNnisQnx84T0XcjM"
 end
