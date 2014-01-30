@@ -11,4 +11,15 @@ class GcmController < BaseController
     gcm_token.save!
     render :json => {status: "OK", registration_id: gcm_token.registration_id}
   end
+
+  def send
+    begin
+      data = JSON.parse(params[:json_data].to_s)
+    rescue JSON::JSONError => e
+      render_error("不正なパラメータです。") and return false
+    end
+    #とりあえず全員に送る
+    responses = GCMToken.send_gcm(data)
+    render :json => {status: "OK", send_data: data}
+  end
 end
