@@ -12,7 +12,7 @@ class GcmController < BaseController
     render :json => {status: "OK", registration_id: gcm_token.registration_id}
   end
 
-  def send
+  def send_message
     begin
       data = JSON.parse(params[:json_data].to_s)
     rescue JSON::JSONError => e

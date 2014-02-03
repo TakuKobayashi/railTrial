@@ -61,7 +61,7 @@ Taptappun::Application.routes.draw do
 
   resource :gcm , controller: :gcm do
     post :regist
-    post :send
+    post :send_message
   end
 
   root to: "top#index"
